@@ -2,6 +2,8 @@
 
 Read the BME680 sensor with the BSEC library on Linux (e.g. Raspberry Pi)
 
+Rewritten for BSEC_1.4.8.0_Generic_Release and i2c 0x77 address.
+
 ## Intro
 
 Working example of fully using the
@@ -18,8 +20,9 @@ Readings will be directly output to stdout in a loop.
 
 ## Prerequisites
 
-[Download the BSEC software package from Bosch](https://www.bosch-sensortec.com/bst/products/all_products/bsec)
-and put it into `./src`, then unpack.
+1. [Download the BSEC software package from Bosch](https://www.bosch-sensortec.com/bst/products/all_products/bsec)and put it into `./src`, then unpack.
+
+2. Change i2c Adress of BME680 Sensor if needed (default: 0x77 = BME680_I2C_ADDR_SECONDARY). File ./bsec_bme680.c Line 36.
 
 ## Configure and Compile
 
